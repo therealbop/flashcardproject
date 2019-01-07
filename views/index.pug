@@ -1,0 +1,32 @@
+doctype
+html(lang="en")
+
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title LSAT Flashcards
+        link(rel='stylesheet' href='/css/style.css')
+            
+    body
+        h1 LSAT Flashcards!
+
+        form(action='/flashcards' method= "POST")
+            input(type="text" placeholder="question" name="question")
+            input(type="text" placeholder="answer" name="answer")
+            button(type="submit" name="addnew") Add New Card
+    .flip-card
+        .flip-card-inner
+            .flip-card-front
+                h3
+            .flip-card-back
+                h4
+
+    button#next Next
+    button#delete Delete
+    button#update(type="submit" name="update") Update
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous")
+    script(src='scripts/index.js') 
+     
